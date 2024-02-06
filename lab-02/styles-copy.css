@@ -1,6 +1,4 @@
-/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
-
 
 body {
     margin: 0;
@@ -8,68 +6,52 @@ body {
     color: rgb(47, 47, 47);
 }
 
-/* Header */
-
 header {
-    overflow: auto;
+    margin-left: 4em;
+    padding: 1em 0;
 }
 
 h1 {
-    margin: 1em 2em;
     font-weight: 400;
 }
-
-h1::selection {
-    background-color:aquamarine;
-}
-
-/* Main wrapper */
 
 .main-wrapper {
     display: flex;
-    /* flex-direction: row-reverse; */
 }
-
-/* Side nav */
 
 nav {
     display: flex;
+    margin-left: 1em;
     flex-direction: column;
-    /* order: 1; */
+    
 }
 
 nav a {
-    font-weight: 400;
-    padding: 1em 3em;
+    padding: 1em 2em;
     text-decoration: none;
-    color: black;
+    color: rgb(47, 47, 47);
 }
 
 nav a::before {
     content: "#";
-    margin-right: 0.3em;
     color: gray;
+    margin-right: 0.5em;
     visibility: hidden;
 }
 
-nav a:hover::before{
+nav a:hover::before {
     visibility: visible;
 }
 
-/* Main content */
-
 main {
-    padding: 0 10em;
+    margin: 0 10em;
 }
 
 section {
-    padding: 0.5em 2em;
+    padding: 1em;
 }
 
 p {
-    line-height: 1.5em;
-}
 
-p button {
-    border: 1px solid;
+    line-height: 1.5em;
 }
