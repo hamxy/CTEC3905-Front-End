@@ -1,0 +1,100 @@
+/* Font Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Menu Toggler */
+
+#menuToggler {
+  display: inline-block;
+  font-size: 2.5em;
+  margin-right: 0.25em;
+  padding: 0.25em;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  position: fixed;
+  overflow: hidden;
+  opacity: 0;
+  width: 100%;
+  top: 0;
+  transform: translateY(-100vw);
+
+  transition: 0.4s;
+}
+
+nav.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: unset;
+  padding: 1em 5em;
+  margin: 0.5em;
+}
+
+/* Main content */
+main {
+  margin: 3em;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 500px) {
+  #menuToggler {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 3em;
+    box-sizing: border-box;
+    position: sticky;
+    transform: translateX(0);
+    opacity: 1;
+
+    box-shadow: 1px 1px 5px gray;
+  }
+
+  nav a {
+    padding: 0.5em 0.5em;
+  }
+
+  nav a:hover {
+    text-decoration: underline gray;
+    text-underline-offset: 0.3em;
+  }
+
+  main {
+    margin: 0 5em;
+  }
+}
