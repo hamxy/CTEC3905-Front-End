@@ -1,6 +1,10 @@
 /* Font Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -57,7 +61,7 @@ main {
     background-color: beige;
     /* box-sizing: border-box; */
     overflow: auto;
-    padding: 3em 1.5em;
+    padding: 5em 1.5em;
 }
 
 section {
@@ -81,14 +85,17 @@ p {
         display: none;
     }
 
+    section {
+        scroll-margin-top: 5em;
+    }
+
     nav {
-        width: auto;
         flex-direction: row;
         opacity: 1;
         transform: translateY(0);
-        position: sticky;
-        padding: 0.25em;
+        padding: 0;
         padding-left: 2em;
+        box-shadow: 1px 1px 7px rgb(160, 160, 160);
     }
     nav a {
         padding: 0.75em;
@@ -99,5 +106,4 @@ p {
         text-decoration: underline gray;
         text-underline-offset: 0.5em;
     }
-
 }
